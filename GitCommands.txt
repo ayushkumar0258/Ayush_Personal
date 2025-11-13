@@ -1,5 +1,5 @@
 ################# Git Command for commiting new Changes ######################
 1. git status
 2. git add .
-3. git commit
-4.
+3. git commit -m "meaningful message for tracking the changes"
+4. git push origin main
