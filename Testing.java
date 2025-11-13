@@ -10,6 +10,8 @@ class Testing
         Scanner scan= new Scanner(System.in);
         System.out.println("Please enter the number : ");
         System.out.println("Entered number is "+scan.nextInt());
+        System.out.println("Git Hub repository Added");
+        //ayush kumar
 
     }
 }
