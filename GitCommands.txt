@@ -1,5 +1,11 @@
-################# Git Command for commiting new Changes ######################
-1. git status
-2. git add .
-3. git commit -m "meaningful message for tracking the changes"
-4. git push origin main
+Scenario 1 # Having Repository in Github and wants to clone with Laptop local so that we can make changes and at loacl and push directory to git hub 
+1. git clone <repository-link>   #### Repository link you can copy from github repository which you want to clone at local (Code sections copy https url)
+2. git status
+3. git add .
+4. git commit -m "meaningful message for tracking the changes"
+5. git push origin main
+
+Scenario 2 # In case you are making local folder and want to push to Hithub
+1. First make the loacl folder go to inside the folder from visual studio code terminal.
+2. git init
+3. 
