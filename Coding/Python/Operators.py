@@ -1,0 +1,28 @@
+### Operators used in pyhton for various operations
+#### Airthmatic Operators  (+, -, *, /, %, //, **)
+#### Assignment Operators (=, +=, -=, *=, /=, %=, //=, **=)
+#### Bitwise Operators (&, |, ^, ~, <<, >>)         
+#### Logical Operators (and, or, not)
+#### Relational Operators (==, !=, >, <, >=, <=)
+#### Membership Operators (in, not in)
+#### Identity Operators (is, is not)        
+num1=6
+num2=3
+num1+num2 # Addition
+print("The addition of num1 and num2 is:", num1+num2);
+num1-num2 # Subtraction
+print("The subtraction of num1 and num2 is:", num1-num2);
+num1*num2 # Multiplication
+print("The multiplication of num1 and num2 is:", num1*num2);
+num1/num2 # Division
+print("The division of num1 and num2 is:", num1/num2);
+num1%num2 # Modulus
+print("The modulus of num1 and num2 is:", num1%num2);           
+#how below mentoined floor divison will work.
+# For example, 10 divided by 7 is approximately 1.42857. The floor division operator (//) will round this down to the nearest whole number, which is 1.
+num1//num2 # Floor Division
+print("The floor division of num1 and num2 is:", num1//num2);
+# How below mentioned exponentiation will work.
+# For example, 10 raised to the power of 7 (10**7) is calculated as 10*10*10*10*10*10*10, which equals 10000000.
+num1**num2 # Exponentiation
+print("The exponentiation of num1 and num2 is:", num1**num2);       
