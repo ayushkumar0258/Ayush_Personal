@@ -6,6 +6,7 @@
 #### Relational Operators (==, !=, >, <, >=, <=)
 #### Membership Operators (in, not in)
 #### Identity Operators (is, is not)        
+###########AIrthmatic Operators uses are below #########################
 num1=6
 num2=3
 num1+num2 # Addition
@@ -25,4 +26,19 @@ print("The floor division of num1 and num2 is:", num1//num2);
 # How below mentioned exponentiation will work.
 # For example, 10 raised to the power of 7 (10**7) is calculated as 10*10*10*10*10*10*10, which equals 10000000.
 num1**num2 # Exponentiation
-print("The exponentiation of num1 and num2 is:", num1**num2);       
+print("The exponentiation of num1 and num2 is:", num1**num2);    
+
+#################### Assignment Operators (=, +=, -=, *=, /=, %=, //=, **= ) ################
+num3=45
+num4=40
+print("Use of = Assignement operator")
+num4=num3
+print("New value for num4", num4)
+print("Use of += assignement operator : this operator first add then assign the value ")
+num3+=num4
+print("New num3 valuse after this assignemnt operartor (num3=num3+num4)",num3)
+print("Use of -= assignemnt operator : this operator first subtract then assign value")
+num5=60
+num4-=num5
+print("New value for num4 after -= operator (num4=num4-num5): ",num4)
+print("")
