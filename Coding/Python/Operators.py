@@ -42,3 +42,8 @@ num5=60
 num4-=num5
 print("New value for num4 after -= operator (num4=num4-num5): ",num4)
 print("")
+num6=78
+num7=90
+print("Assignement operator *= we will sede the use below")
+num6*=num7
+print("After this assignement operator new value of num6 is : ",num6)
