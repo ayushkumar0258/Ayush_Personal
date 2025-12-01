@@ -47,3 +47,4 @@ num7=90
 print("Assignement operator *= we will sede the use below")
 num6*=num7
 print("After this assignement operator new value of num6 is : ",num6)
+print("Nice to work with this theme")
