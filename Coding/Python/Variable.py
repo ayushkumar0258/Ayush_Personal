@@ -1,3 +1,11 @@
+#Rule for variable names are following:
+#1. Variable names can only contain letters, numbers, and underscores.
+#2. Variable names must start with a letter or an underscore.
+#3. Variable names are case-sensitive.
+#4. Variable names cannot be a reserved keyword in Python.  
+#Variable can not start with number.
+# Variable can not start with special characters.
+# there is no space in variable name. there should be underscore between name of variable.
 ## In python we have different type of variables like string, interger, float, boolean etc.
 ## In python we use one more data type it's called complex. (Real part + imaginary part j)
 name1="John"

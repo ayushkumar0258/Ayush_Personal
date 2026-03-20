@@ -48,3 +48,11 @@ print("Assignement operator *= we will sede the use below")
 num6*=num7
 print("After this assignement operator new value of num6 is : ",num6)
 print("Nice to work with this theme")
+### Python BOSMAS Rule
+# In python we have a rule called BOSMAS rule which is used to solve the expression in python. This rule is used to solve the expression in python. The BOSMAS rule is as follows
+# B - Brackets
+# O - Orders (i.e. powers and square roots, etc.)
+# S - Division and Multiplication (from left to right)
+# A - Addition and Subtraction (from left to right)
+# For example, if we have an expression like 2 + 3 * 4,
+print("Use of BOSMAS rule in python", 2+4%6*67-34/2)
