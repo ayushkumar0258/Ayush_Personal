@@ -161,4 +161,13 @@ print("Slice with negative indices from -6 to -1:", slice4)
 # Slicing with a negative step (reversing the string)
 slice5 = my_string[::-1]
 print("Slice with a negative step (reversed string):", slice5)
-            
+
+######## We have to use string in double quotes because some sentences having single quotes in it#######
+#string_with_single_quotes = 'It's a nice day!'# ! This will cause a SyntaxError because the single quote in "It's" will be interpreted as the end of the string. To fix this, we can either use double quotes to define the string or escape the single quote using a backslash (\).
+string_with_single_quotes_new = "It's a nice day!" # This will work correctly because we are using double quotes to define the string, allowing us to include the single quote without any issues.  
+print("String with single quotes inside:", string_with_single_quotes_new)
+print("New\tWord") ## \t is used to add a tab space between "New" and "Word"
+print("New\nWord") ## \n is used to add a new line between "New" and "Word"
+print("New\\Word") ## \\ is used to add a backslash between "New" and "Word"
+print("She said, \"Hello!\"") ## \" is used to add double quotes inside a string defined by double quotes
+print('She said, "Hello!"') ## This will work correctly because we are using single quotes to define the string, allowing us to include double quotes without any issues.       
