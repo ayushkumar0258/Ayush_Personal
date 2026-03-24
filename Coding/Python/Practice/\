@@ -1,26 +1,6 @@
-dict={"id":"300","name":"Arushi","gender":"Male","mob":"7895008172"}
-print("Printing the gender of the directory   :   ",dict["gender"])
-dict["rollNo"]=1366577
-print("newly added key value : ",dict)
-dict.pop("name")
-print("Directory after removing key name  : ", dict)
-#########################################
-tuple_data=(2,4,5,6,3,2,3,5,6,8)
-print("current tuple date    :  ",tuple_data)
-print("Value at index 3 are following : ",tuple_data[3])
-tuple_newData=("ayush",67.78,True,"Hi",1,2,3)
-print("Data of new tuple are follwoing : ",tuple_newData)
-set_data={3,5,3,4,4,5,5,6,7,8,5,8,9,1,9}
-print("Newly created set data are following : ",set_data)
-
-set_data.remove(4)
-print("Newly update value qith index 6 are following   : ", set_data)
-set_data.add(2)
-print("Set value after adding 2 : ", set_data)
-set_data.add(0)
-print("set value after adding 0 in set : ",set_data)
-set_data.add(5)
-print("Adding 5 into set, 5 value already exists : ",set_data
-
+num=234
+print("the type of this data",type(num))
+str_num=str(num)
+print("New string data type of num", type(str_num))
 
 
