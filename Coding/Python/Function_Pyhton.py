@@ -22,7 +22,9 @@ print("The type of str_bool_var is : ", type(str_bool_var))
 ######## function 4 : int function to convert other data type into integer ########
 str_num3="123"
 str_num4="45.67"
-str_bool_var2="True"                
+str_bool_var2="True" 
+str_int="Hey" 
+str_int_convert=int(str_int) #! This will cause a ValueError because the string "Hey" cannot be converted to an integer. To fix this, we can either choose a string that represents a valid integer (e.g., "123") or handle the error using a try-except block. For example            
 int_num3=int(str_num3)
 int_num4=int(float(str_num4)) # We have to convert string to float first because
 # directly converting string with decimal point to integer will cause a ValueError. By converting it to float first, we can then convert the float to an integer without any issues.
