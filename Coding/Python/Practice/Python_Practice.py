@@ -57,3 +57,46 @@ print("the string slice5 is : ",slice5)
 slice6=name[::-2]
 print("the string slice6 is : ", slice6)
 
+num=234
+print("the type of this data",type(num))
+str_num=str(num)
+print("New string data type of num", type(str_num))
+str_string="My Name is AYush"
+print("Indexing values of this string",str_string[0])
+print("Indexing values of this string",str_string[0])
+print("the type of this data",type(num))
+str_num=str(num)
+print("New string data type of num", type(str_num))
+str_string="My Name is AYush"
+print("Indexing values of this string",str_string[0])
+print("Indexing values of this string",str_string[0])
+
+str_string="My Name is AYush"
+#float_string =float(str_string)
+#print("Indexing values of this string",type(float_string))
+
+sting_for_int="True"
+#print("Data type for the this object",type(int(float(sting_for_int))))
+
+#print("the type of this data",type(sting_for_int))
+print("new sting to int data type",type(int((sting_for_int=="hey my love"))))
+num2=45.87
+int2=int(num2)
+print(type(int2))
+########### float type conversion ##########
+num1=45
+float1=float(num1)
+print(type(float1))
+str22="Ayush"
+float3=float(str22=="Ayush")
+print(type(float3))
+print("Value for float3",float3)
+print("String start with Hello", str22.startswith("A"))
+str='JIJIJI'
+print("First letter",str[1])
+print("New file is having following data ".format())
+print("New file {3} {2} {1} {0}".format('dictionary','letter','data','Hey'))
+print("New file {} {} {} {}".format('dictionary','letter','data','Hey'))
+print("New file {2} {2} {3} {2}".format('dictionary','letter','data','Hey'))
+print("Hey ayush {0} you {1}".format('how', 'doing'))
+print("Hey ayush {} you {} {} {} {}".format('how', 'doing','i','am','Good'))
