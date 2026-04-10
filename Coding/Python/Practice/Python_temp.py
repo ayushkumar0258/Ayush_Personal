@@ -101,12 +101,14 @@ print("New file {2} {2} {3} {2}".format('dictionary','letter','data','Hey'))
 print("Hey ayush {0} you {1}".format('how', 'doing'))
 print("Hey ayush {} you {} {} {} {}".format('how', 'doing','i','am','Good'))
 str='JIJIJI'
-print("Hey here is new string formatting rule {}".format(str))
-print("Hey hey i am back,best to know")
-print("Ayush Kumar")
-print("Happy birthday")
-str22="Ayush"
-print(f"Here new format of string will introduce {str22}")
-print("Here new format of string will introduce {}".format(str22))
-print("Here new format of string will introduce {s}".format(s=str22))
-print("Here new format of string will introduce {s1}".format(s1=str22))
+print("First letter",str[1])
+print("New file is having following data ".format())
+print("New file {3} {2} {1} {0}".format('dictionary','letter','data','Hey'))
+print("New file {} {} {} {}".format('dictionary','letter','data','Hey'))
+print("New file {2} {2} {3} {2}".format('dictionary','letter','data','Hey'))
+print("Hey ayush {0} you {1}".format('how', 'doing'))
+print("Hey ayush {} you {} {} {} {}".format('how', 'doing','i','am','Good'))
+print("Hey ayush {0} you {rest}".format('how', 'doing'))
+
+print("Hey my new life journy to get into this")
+
