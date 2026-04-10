@@ -19,4 +19,3 @@ print("Combined all my)list and another_list together :  ",my_list+another_list)
 ############################# ? Replacing element in the list ##################
 my_list[3]='true'
 print ("elements after replacing values are following : ", my_list)
-
