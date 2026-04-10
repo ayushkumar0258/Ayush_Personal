@@ -10,4 +10,5 @@ print(f"My name is {name.upper()}") # This will convert the value of the variabl
 print(f"My name is {name.lower()}") # This will convert the value of the variable name to lowercase using the lower() method and then embed it in the string. The output will be: My name is ayush kumar                                                   
 roll=258  
 subject="Mathematics"       
-print(f"My name is {name} and my roll number is {roll} and i am studying subject {subject}")
+print(f"My name is {name} and my roll number is {roll} and i am studying subject {subject}") # This will embed the values of the variables name, roll, and subject into the string. The output will be: My name is AYush Kumar and my roll number is 258 and i am studying subject Mathematics      
+

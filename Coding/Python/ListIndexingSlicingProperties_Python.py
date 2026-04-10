@@ -12,6 +12,11 @@ print ("new slicing will be like :    ", my_list_mixed[1:7:1]) # This will print
 print("Printing the my list on the bases of the indexing : ", my_list_mixed[5]) # This will print the element at index 5 of the list my_list_mixed, which is [1, 2, 3]. In Python, list indexing starts at 0, so my_list_mixed[0] refers to the first element, my_list_mixed[1] refers to the second element, and so on. Therefore, my_list_mixed[5] will refer to the sixth element of the list, which is [1, 2, 3].
 print("the length of the list id: ")
 print("Elements from list after 2 position : ",my_list[2:])
+############################### ? List properties  ##############################
+############################## ? Addition of two or more list #####################
 another_list=['apple','Orange','Mango']
 print("Combined all my)list and another_list together :  ",my_list+another_list) #this will combined both the list together by + sign
-#
+############################# ? Replacing element in the list ##################
+my_list[3]='true'
+print ("elements after replacing values are following : ", my_list)
+
