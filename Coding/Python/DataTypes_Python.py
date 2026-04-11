@@ -65,6 +65,10 @@ set_mutable.add(6) # this will add 6 to the set
 print("Set after adding 6:", set_mutable)
 set_mutable.remove(2) # this will remove 2 from the set
 print("Set after removing 2:", set_mutable)
+#set_mutable.remove() # ! this will not remove anything from set becasue remove() expecting atleast one argument for removing.
+print("Set after removing :", set_mutable)
+#set_mutable.remove(10) # ! this will remove 10 from the set, here 10 is not the part of the set. will throw an error as 10 in not the part of set that we are trying to remove from set.
+print("Set after removing 10:", set_mutable)
 #set_insert(3,67) # ! This will cause an AttributeError because sets do not have an insert method, since sets are unordered and do not support indexing.
 ################### ?- Dictionary - dict ########################################################
 #1. Dictionary is a collection which is ordered and changeable. No duplicate members.
@@ -96,17 +100,17 @@ print("Practice Dictonary is following :", dict_pratcice)
 # Please conclude the all the data types i python in table format for better understanding.
 
 #Python Data Types Summary
-#Data Type	    Example	                Mutable	    Ordered	    Allows Duplicates	      Description
-#int	            10	                ❌ No	    ❌ No	    ❌ No	                Integer numbers
-#float	            10.5                ❌ No	    ❌ No	    ❌ No                   	Decimal numbers
-#complex	        2+3j	            ❌ No	    ❌ No	    ❌ No                   	Complex numbers
-#str	            "Hello"	            ❌ No	    ✅ Yes	    ✅ Yes                  	Text/String
-#list        	    [1, 2, 3]	        ✅ Yes      	✅ Yes	    ✅ Yes	                Ordered, changeable collection
-#tuple	             (1, 2, 3)	        ❌ No	    ✅ Yes	    ✅ Yes	                Ordered, immutable collection
-#set	            {1, 2, 3}	        ✅ Yes	    ❌ No	    ❌ No	                Unordered, unique elements
-#dict	            {"a":1, "b":2}	    ✅ Yes	    ✅ Yes*	    ❌ (keys)	            Key-value pairs
-#bool	            True / False	    ❌ No	    ❌ No	    ❌ No	                Logical values
-#NoneType	         None	            ❌ No	    ❌ No	    ❌ No	                Represents no value
+#Data Type	    Example	                Mutable	                    Ordered	    Allows Duplicates	      Description
+#int	            10	                ❌ No	                    ❌ No	    ❌ No	                Integer numbers
+#float	            10.5                ❌ No	                    ❌ No	    ❌ No                   	Decimal numbers
+#complex	        2+3j	            ❌ No	                    ❌ No	    ❌ No                   	Complex numbers
+#str	            "Hello"	            ❌ No	                    ✅ Yes	    ✅ Yes                  	Text/String
+#list        	    [1, 2, 3]	        ✅ Yes (add,remove,update) 	✅ Yes	    ✅ Yes	                Ordered, changeable collection
+#tuple	             (1, 2, 3)	        ❌ No	                    ✅ Yes	    ✅ Yes	                Ordered, immutable collection
+#set	            {1, 2, 3}	        ✅ Yes (add,remove)	        ❌ No	    ❌ No	                Unordered, unique elements
+#dict	            {"a":1, "b":2}	    ✅ Yes (add,remove,update)   ✅ Yes*	    ❌ (keys)	            Key-value pairs
+#bool	            True / False	    ❌ No	                    ❌ No	    ❌ No	                Logical values
+#NoneType	         None	            ❌ No	                     ❌ No	    ❌ No	                Represents no value
 #📌 Important Notes
 
 #✅ Mutable = Can be changed after creation (list, set, dict)
