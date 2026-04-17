@@ -47,3 +47,23 @@ print("dictonary after removing tuple key value from dictonary",key1)
 ################ ? popitem() - this method is used for removing last key item from dictonary ############
 new_dict.popitem()
 print("dictonary after removing tuple key value from dictonary",new_dict)
+
+############## ? setdefault() - this method is used for adding key with values in dictonary if value with that key is not present ##############
+new_dict.setdefault('k5',500)
+print("dictonary after removing tuple key value from dictonary",new_dict)
+new_dict.setdefault('k1',400)
+print("dictonary after removing tuple key value from dictonary",new_dict)
+
+############## ? update() - this used to update if key matched or add new key if key not present #########
+new_dict.update({'k1':200})
+print("dictonary after removing tuple key value from dictonary",new_dict)
+new_dict.update({'k7':200})
+print("dictonary after removing tuple key value from dictonary",new_dict)
+
+############ ? value() - used for getting all keys values #################
+values1=new_dict.values()
+print("dictonary after removing tuple key value from dictonary",values1)
+
+value2=my_dict.values()
+print("dictonary after removing tuple key value from dictonary",value2)
+
