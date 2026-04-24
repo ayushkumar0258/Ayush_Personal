@@ -47,6 +47,7 @@ print("the name of the operating system dependent module imported is : ", os.nam
 os.system("ls") ##### to execute the command in the system and return the exit status of the command. it will list the files and directories in the current directory. we can use any command like mkdir, rmdir, etc. as well.
 os.system("find . -name 'myfile*'") ##### to find the file with name starting with myfile in the current directory and subdirectories. we can use any command like mkdir, rmdir, etc. as well.
 os.system("mkdir -m 777 mydir_os") ##### to create a new directory with permissions 777 in the current directory. we can use any command like mkdir, rmdir, etc. as well.
+os.system("mkdir -m 777 /Users/ayushkumar/Learning/GitHub/Ayush_Personal/Coding/Python/Practice/DirectoryTest/OSTesting/New_dir") ##### to create a new directory with permissions 777 in the current directory. we can use any command like mkdir, rmdir, etc. as well.
 os.system("rm -rf mydir_os") ##### to remove the directory created in the current directory. we can use any command like mkdir, rmdir, etc. as well.
 os.system("cp myfile.txt ./Python/Practice/DirectoryTest/OSTesting/.") ##### to copy the file from current directory to the given directory. we can use any command like mkdir, rmdir, etc. as well.
 os.system("mv ./Python/Practice/DirectoryTest/OSTesting/myfile.txt ./Python/Practice/DirectoryTest/OSTesting/myfile_moved.txt") ##### to move the file from current directory to the given directory. we can use any command like mkdir, rmdir, etc. as well.
@@ -66,3 +67,26 @@ print("for checking does this is directory or not? : ", os.path.isdir("/Users/ay
 
 ########################## ? -getsize() - this method is used to get the size of the file mentioned in the path given. it will return the size of the file in bytes. ##############
 print("the size of the file is in bytes: ", os.path.getsize("/Users/ayushkumar/Learning/Github/Ayush_Personal/Coding/myfile.txt"))
+
+########################## ? - join() - this method is used to join one or more path components intelligently. it will return the joined path. ##############
+path=os.path.join("/Users/ayushkumar/Learning/Github/Ayush_Personal/Coding/Python", "Practice","DirectoryTest","OSTesting")
+print("The joined path is : ", path)
+os.system("ls + " +path) ##### to list the files and directories in the joined path. we can use any command like mkdir, rmdir, etc. as well.
+os.system("mkdir -m 777 " + path + "/Joined_path_dirc")
+os.system ("ls " + path)
+os.system("rm -rf " + path + "/Joined_Path_dirc")
+os.system ("ls " + path)
+
+Path1=os.path.join("/Users/ayushkumar/Learning/Github/Ayush_Personal/Coding","Python")
+Path2=os.path.join(Path1 , "Practice")
+Path3=os.path.join (Path2,"DirectoryTest")
+Path4=os.path.join(Path3,"OSTesting")
+
+print("the joined path is : ", Path4)
+os.system("ls " + Path4)
+os.system("rm -rf " + Path4 + "/New_dir")
+os.system("ls " + Path4)
+
+############ ? chdir() - this method is used to change the current working directory to the given path. ##############
+os.chdir("/Users/ayushkumar/Learning/Github/Ayush_Personal/Coding/Python/Practice") ##### to change the current working directory to the given path.
+os.system("ls")
