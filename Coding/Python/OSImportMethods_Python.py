@@ -66,7 +66,7 @@ print("for checking does this is directory or not? : ", os.path.isdir("/Users/ay
 print("for checking does this is directory or not? : ", os.path.isdir("/Users/ayushkumar/Learning/Github/Ayush_Personal/Coding"))
 
 ########################## ? -getsize() - this method is used to get the size of the file mentioned in the path given. it will return the size of the file in bytes. ##############
-print("the size of the file is in bytes: ", os.path.getsize("/Users/ayushkumar/Learning/Github/Ayush_Personal/Coding/myfile.txt"))
+#print("the size of the file is in bytes: ", os.path.getsize("/Users/ayushkumar/Learning/Github/Ayush_Personal/Coding/myfile.txt"))
 
 ########################## ? - join() - this method is used to join one or more path components intelligently. it will return the joined path. ##############
 path=os.path.join("/Users/ayushkumar/Learning/Github/Ayush_Personal/Coding/Python", "Practice","DirectoryTest","OSTesting")
@@ -90,3 +90,4 @@ os.system("ls " + Path4)
 ############ ? chdir() - this method is used to change the current working directory to the given path. ##############
 os.chdir("/Users/ayushkumar/Learning/Github/Ayush_Personal/Coding/Python/Practice") ##### to change the current working directory to the given path.
 os.system("ls")
+

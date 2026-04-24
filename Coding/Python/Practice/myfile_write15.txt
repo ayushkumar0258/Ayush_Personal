@@ -1,0 +1,5 @@
+This is my first line in the file
+This is my second line in the file
+This is my third line in the file
+myfile=open('myfile_write15.txt')
+myfile1=open('myfile_write115.txt')
