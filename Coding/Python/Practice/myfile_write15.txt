@@ -1,5 +1,24 @@
-This is my first line in the file
-This is my second line in the file
+`hey we are using both mode together 
+this is new mode for me 
+ file
 This is my third line in the file
 myfile=open('myfile_write15.txt')
 myfile1=open('myfile_write115.txt')
+hey we are using both mode together 
+this is new mode for me 
+hey we are using both mode together 
+this is new mode for me 
+hey we are using both mode together 
+this is new mode for me 
+adding end of the file hey we are using both mode together 
+please vaerify with above line this is new mode for me 
+adding end of the file hey we are using both mode together 
+please vaerify with above line this is new mode for me 
+adding end of the file hey we are using both mode together 
+please vaerify with above line this is new mode for me 
+adding end of the file hey we are using both mode together 
+please vaerify with above line this is new mode for me 
+adding end of the file hey we are using both mode together 
+please vaerify with above line this is new mode for me 
+adding end of the file hey we are using both mode together 
+please vaerify with above line this is new mode for me 

@@ -70,3 +70,81 @@ myfile2.close() ##### to close the file after reading it
 os.system("pwd") ##### to print the current working directory
 
 
+############################## ? seek() method - this will move the file pointer to the specified position in the file, it takes one argument which is the number of bytes to move the file pointer. ##############
+print("Below we are using seek() method to move the file pointer to the specified position in the file")
+myfile3=open("myfile_write.txt") ##### to open the file
+print(myfile3.readline()) ##### this will read the first line of the file
+myfile3.seek(0) ##### this will move the file pointer to the beginning of the file, so that we can read the file again from the beginning of the file.
+print(myfile3.readline()) ##### this will read the first line of the file again because we have moved the file pointer to the beginning of the file using seek() method.
+myfile3.close() ##### to close the file after reading it    
+
+####################### To move the file pointer to the end of a file, use: ##################
+#syntax : f.seek(0, 2)
+#Explanation
+#seek(offset, whence)
+#offset → number of bytes to move
+#whence → reference point:
+#0 → beginning of file (default)
+#1 → current position
+#2 → end of file ✅
+###################### ? - with (Keyword) - this is a context manager in python which is used to manage the resources, it will automatically close the file after the block of code is executed, so we don't have to worry about closing the file after reading it. ##############
+with open("/Users/ayushkumar/Learning/GitHub/Ayush_Personal/Coding/Python/Practice/my_new_file.txt","w") as newdata:
+    newdata.write("Hey my name is ayush kumar \n")
+    newdata.write("I am here in israel for learning python \n")
+    newdata.write("Good to see you all \n")
+    os.chdir("/Users/ayushkumar/Learning/GitHub/Ayush_Personal/Coding/Python/Practice")
+    os.system("ls")
+with open("my_new_file.txt","r") as read_newdata:
+    print(read_newdata.read())
+
+######################## ? - without using with keyword - this will not automatically close the file after reading it, so we have to manually close the file after reading it. ##############
+file2=open("my_new_file.txt")
+print(file2.read())
+file2.close()
+
+##################### ? seek () method practice ###################
+print("Below we are trying to ptint file without seek method - Mean using 2 print statement but one once file will print")
+with open ("my_new_file.txt","r") as file3:
+    print(file3.read())
+    print(file3.read())
+
+print("Below we are using seek method so that it will print the file twice because we have moved the file pointer to the beginning of the file using seek() method.")
+with open ("my_new_file.txt",'r') as file4:
+    print(file4.read())
+    file4.seek(0) # this will move the cursor to the beginning of the file
+    print(file4.read())
+
+####################### ? readlines() method - this will read the file and return a list of lines in the file, each line will be an element in the list. ##############
+print("Below we are using readlines() method to read the file and return a list of lines in the file")
+with open("my_new_file.txt","r") as file5:
+    print(file5.readlines()) ##### this will return a list of lines in the file, each line will be an element in the list.
+os.system("pwd")
+
+with open("my_new_file.txt") as file6:
+    print(file6.readlines())
+
+######################### ? mode - r+ - this will open the file for both reading and writing, if file does not exist with same name at working directory then it will give error that file does not exist. ##############
+print("Below we are using r+ mode to open the file for both reading and writing without seek() method, this will write the lines in the starting of the file becasue file cursor in the starting and we are reading just after the writing the lines, so it will readnext to the lines that we have written in the starting of the file. because that time cursor was at that position. ")
+os.system("pwd")
+with open("myfile_write15.txt","r+") as file7:
+    file7.write("`hey we are using both mode together \n")
+    file7.write("this is new mode for me \n")
+    print(file7.read())
+
+print("Here we will use seek(0,2) to move cusrsor end of the file before start writing the file")
+with open ("myfile_write15.txt","r+") as file8:
+    file8.seek(0,2)
+    file8.write("adding end of the file hey we are using both mode together \n")
+    file8.write("please vaerify with above line this is new mode for me \n")
+    print(file8.read()) ##### nothing will print because when it's going to read the cursor was in the end of the file.
+    file8.seek(0) #### here we are moving cusror in the starting of the file then reading the file.
+    print(file8.read()) ##### this will read the whole file because we have moved the cursor to the beginning of the file using seek(0) method.
+
+########################## ? mode - w+ - this will open the file for both writing and reading, if file does not exist with same name at working directory then it will create a new file and open it for both writing and reading. ##############
+print("Below we are using w+ mode to open the file for both writing and reading without seek() method, this will write the lines in the starting of the file becasue file cursor in the starting and we are reading just after the writing the lines, so it will readnext to the lines that we have written in the starting of the file. because that time cursor was at that position. ")
+with open("myfile_write16.txt","w+") as file9:
+    file9.write("hey we are using both mode together \n")
+    file9.write("this is new mode for me \n")
+    file9.seek(0)
+    print(file9.read()) ##### nothing will print because when it's going to read the cursor was
+
