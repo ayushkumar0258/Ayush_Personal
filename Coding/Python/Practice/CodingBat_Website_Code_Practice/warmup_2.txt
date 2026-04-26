@@ -1,0 +1,90 @@
+##################### Problem 1 #############
+Given a string and a non-negative int n, return a larger string that is n copies of the original string.
+
+E.g:
+string_times('Hi', 2) → 'HiHi'
+string_times('Hi', 3) → 'HiHiHi'
+string_times('Hi', 1) → 'Hi'
+
+---Solution---
+def string_times(str, n):
+  newstring=''
+  for i in range(n):
+    newstring=newstring + str
+  return newstring
+
+################# Problem 2 ##############
+Given a string and a non-negative int n, we'll say that the front of the string is the first 3 chars, or whatever is there if the string is less than length 3. Return n copies of the front;
+
+E.g:
+front_times('Chocolate', 2) → 'ChoCho'
+front_times('Chocolate', 3) → 'ChoChoCho'
+front_times('Abc', 3) → 'AbcAbcAbc'
+
+---SOlution---
+def front_times(str, n):
+  if(len(str)>2):
+    new_data=str[:3]
+    new_string=''
+    for i in range(n):
+      new_string=new_string+new_data
+    return new_string
+  else:
+    new_string=''
+    for i in range(n):
+      new_string=new_string+str
+    return new_string
+
+####################### Problem 3 #############
+
+Given a string, return a new string made of every other char starting with the first, so "Hello" yields "Hlo".
+
+E.g:
+string_bits('Hello') → 'Hlo'
+string_bits('Hi') → 'H'
+string_bits('Heeololeo') → 'Hello'
+
+---Solution---
+def string_bits(str):
+  new_string=str[::2]
+  return new_string
+
+######################### Problem 4 #########################
+
+Given a non-empty string like "Code" return a string like "CCoCodCode".
+
+E.g:
+string_splosion('Code') → 'CCoCodCode'
+string_splosion('abc') → 'aababc'
+string_splosion('ab') → 'aab'
+
+---Solution---
+def string_splosion(str):
+  new_string=''
+  for i in range (len(str)):
+    new_string=new_string+str[:i+1]
+  return new_string
+
+########################### Problem 5 ###################
+
+Given a string, return the count of the number of times that a substring length 2 appears in the string and also as the last 2 chars of the string, so "hixxxhi" yields 1 (we won't count the end substring).
+
+E.g:
+last2('hixxhi') → 1
+last2('xaxxaxaxx') → 1
+last2('axxxaaxx') → 2
+
+---Solution---
+def last2(str):
+  if(len(str)>=2):
+    new_string=str[len(str)-2:len(str)]
+    count_data=0
+    for i in range(len(str)):
+      if(str[i:i+2]==new_string):
+        count_data=count_data+1
+    return count_data-1
+  else:
+    return 0
+  
+############################### Problem 6 ################
+

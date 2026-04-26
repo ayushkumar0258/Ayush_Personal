@@ -53,3 +53,71 @@ print(uppercase_string) # This will output "HELLO, WORLD!" by converting all cha
 #A. We can check if a string starts with a specific substring in Python using the startswith() method. For example:
 my_string = "Hello, World!"
 print(my_string.startswith("Hello")) # This will return True because the string "Hello, World!" starts with the substring "Hello". If we check for a different substring, such as "Hi", it would return False because the string does not start with "Hi".      
+
+############## ? - List of string methods in Python #################
+#Case Conversion
+#s = "hello world"
+#s.upper()      # "HELLO WORLD"
+#s.lower()      # "hello world"
+#s.capitalize() # "Hello world"
+#s.title()      # "Hello World"
+#s.swapcase()   # "HELLO WORLD" -> "hello world"
+
+#Searching & Checking
+#s = "hello world"
+#s.find("world")     # 6 (index)
+#s.index("world")    # 6 (error if not found)
+#s.count("l")        # 3
+#s.startswith("he")  # True
+#s.endswith("ld")    # True
+
+#Boolean Checks
+#s = "hello123"
+#s.isalpha()   # False (has numbers)
+#s.isdigit()   # False
+#s.isalnum()   # True
+#s.isspace()   # False
+#s.islower()   # True
+#s.isupper()   # False
+
+#Modify Strings
+#s = "  hello world  "
+#s.strip()     # "hello world"
+#s.lstrip()    # remove left spaces
+#s.rstrip()    # remove right spaces
+#s.replace("world", "Python")  # "hello Python"
+
+#Split & Join
+#s = "a,b,c"
+#s.split(",")      # ['a', 'b', 'c']
+#"-".join(["a","b","c"])  # "a-b-c"
+
+#Alignment & Formatting
+#s = "hello"
+#s.center(10)   # '  hello   '
+#s.ljust(10)    # 'hello     '
+#s.rjust(10)    # '     hello'
+#name = "Ayush"
+#f"Hello {name}"   # formatted string
+
+#Other Useful Methods
+#s = "hello"
+#len(s)        # 5
+#s[0]          # 'h'
+#s[::-1]       # reverse → "olleh"
+
+
+##################
+s='java'
+if(len(s)>2):
+    new_string=s[:3]+s[:3]+s[:3]
+    print(new_string) # This will create a new string by taking the first three characters of the original string "java" and repeating them three times. The output will be "javjavjav". If the length of the string is not greater than 2, it will simply print the original string without any modifications.
+else:
+    print(s)
+
+s='axxxaaxx'
+new_string=s[len(s)-2:len(s)]
+print(new_string)
+######### we want to count the number of times "hi" appears in the string "hixxhi" #########
+counts=s.count(new_string)
+print(counts-1)
