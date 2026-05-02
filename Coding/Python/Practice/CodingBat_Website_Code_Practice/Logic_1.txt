@@ -124,3 +124,44 @@ love6(1, 5) → True
 
 ---Solution---
 
+def love6(a, b):
+  if (a==6 or b==6):
+    return True
+  elif((a+b)==6 or (abs(a-b)==6)):
+    return True
+  else:
+    return False
+
+##################### Problem 8 (in1to10) ############
+Given a number n, return True if n is in the range 1..10, inclusive. Unless outside_mode is True, in which case return True if the number is less or equal to 1, or greater or equal to 10.
+
+E.g:
+in1to10(5, False) → True
+in1to10(11, False) → False
+in1to10(11, True) → True
+
+---Solution ---
+def in1to10(n, outside_mode):
+  if(outside_mode == True and (n<=1 or n>=10)):
+    return True
+  elif(outside_mode == False and (n >=1 and n <= 10)):
+    return True
+  else:
+    return False
+    
+
+######################  Problem 9 (near_ten) ##############
+Given a non-negative number "num", return True if num is within 2 of a multiple of 10. Note: (a % b) is the remainder of dividing a by b, so (7 % 5) is 2. See also: Introduction to Mod
+
+E.g:
+near_ten(12) → True
+near_ten(17) → False
+near_ten(19) → True
+
+---Solution ---
+def near_ten(num):
+  if(num%10 <= 2 or num%10 >=8):
+    return True
+  else:
+    return False
+
