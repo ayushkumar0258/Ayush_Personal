@@ -108,16 +108,3 @@ print(my_string.startswith("Hello")) # This will return True because the string 
 
 
 ##################
-s='java'
-if(len(s)>2):
-    new_string=s[:3]+s[:3]+s[:3]
-    print(new_string) # This will create a new string by taking the first three characters of the original string "java" and repeating them three times. The output will be "javjavjav". If the length of the string is not greater than 2, it will simply print the original string without any modifications.
-else:
-    print(s)
-
-s='axxxaaxx'
-new_string=s[len(s)-2:len(s)]
-print(new_string)
-######### we want to count the number of times "hi" appears in the string "hixxhi" #########
-counts=s.count(new_string)
-print(counts-1)
