@@ -58,7 +58,8 @@ bool_num8=bool(int(str_num8)) # This will convert the string "123" to the intege
 print("The type of bool_var4 is : ", type(bool_var4))
 print("The type of bool_var5 is : ", type(bool_var5))
 print("The type of bool_num7 is : ", type(bool_num7))
-print("The type of bool_num8 is : ", type(bool_num8))
+print("The type of bool_num8 is : ", type(bool_num8)) 
+
 
 
 
