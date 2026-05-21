@@ -41,4 +41,16 @@ for i in enumerate ('ayush'):
 for ind,val in enumerate ('kumar'):
     print("The value at index {} is {}".format(ind,val))
 
+for ind,val in enumerate ('kumar'):
+    print(ind)
+    #print('\n')
+    print(val)
 
+list1=[3,4,5,6]
+list2=['a','b','c','d','e']
+for i in zip (list1,list2):    ##### this zip used for combing the 2 list in which list1 will be index and another list2 will the value and here values will assign till minimum number of count. Here if you see list1 having 4 items and list2 having 5 items so that indexing will assign for first 4 items only.
+    print(i)
+list1=[3,4,5,6]
+list2=['d','e']
+for i in zip (list1,list2):    ##### this zip used for combing the 2 list in which list1 will be index and another list2 will the value and here values will assign till minimum number of count. Here if you see list1 having 4 items and list2 having 5 items so that indexing will assign for first 4 items only.
+    print(i)
