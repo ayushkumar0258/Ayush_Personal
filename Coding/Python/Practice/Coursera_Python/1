@@ -1,0 +1,4 @@
+########## String indexing #######
+str1='banana'
+for i in range(str1.len()):
+    print("At index {i} :",str1[i])
