@@ -1,0 +1,11 @@
+import socket
+mysock=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+mysock.connect(('data.pr4e.org',80))
+cmd='GET http://data.pr4e.org/romeo.txt HTTP/1.0\n\n'.encode()
+mysock.send(cmd)
+while True:
+    data=mysock.recv(512) ### recv method is used to receive the data from the server and 512 is the number of bytes that we want to receive at a time. if we want to receive more than 512 bytes then we can use a loop to receive the data in chunks of 512 bytes until we receive all the data from the server.
+    if (len(data) < 1 ):
+        break
+    print(data.decode())
+mysock.close()
