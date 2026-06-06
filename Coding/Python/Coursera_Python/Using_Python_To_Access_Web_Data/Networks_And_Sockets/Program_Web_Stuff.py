@@ -28,3 +28,5 @@ print(type(y))
 z = y.decode()  ### this will convert the bytes into string and the default encoding is UTF-8
 print(z)    
 print(type(z))    
+
+########## encoding mean byte representation of a string and decoding mean converting the byte representation back to string. ############

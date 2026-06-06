@@ -1,0 +1,17 @@
+import xml.etree.ElementTree as ET
+data='''<stuff>
+<users>
+<user x="2">
+<id>001</id>
+<name>Ayush</name>
+</user>
+<user x="7">
+<id>002</id>
+<name>Kumar</name>
+</user>
+</users>
+</stuff>'''
+new_data=ET.fromstring(data)
+for i in new_data.findall('users/user'):
+    print (i)
+
