@@ -1,1 +1,127 @@
 please share the list of command used for accessing CLI?
+
+# AWS CLI
+aws --version
+aws help
+
+# Configuration
+aws configure
+aws configure list
+aws configure list-profiles
+
+# Identity
+aws sts get-caller-identity
+
+# IAM
+aws iam list-users
+aws iam create-user --user-name USERNAME
+aws iam delete-user --user-name USERNAME
+aws iam list-groups
+aws iam create-group --group-name GROUPNAME
+aws iam add-user-to-group --user-name USERNAME --group-name GROUPNAME
+aws iam list-roles
+aws iam list-policies
+
+# S3
+aws s3 ls
+aws s3 mb s3://BUCKETNAME
+aws s3 rb s3://BUCKETNAME
+aws s3 cp FILE s3://BUCKETNAME
+aws s3 cp s3://BUCKETNAME/FILE .
+aws s3 sync LOCAL_FOLDER s3://BUCKETNAME
+aws s3 rm s3://BUCKETNAME/FILE
+
+# EC2
+aws ec2 describe-instances
+aws ec2 start-instances --instance-ids INSTANCE_ID
+aws ec2 stop-instances --instance-ids INSTANCE_ID
+aws ec2 reboot-instances --instance-ids INSTANCE_ID
+aws ec2 terminate-instances --instance-ids INSTANCE_ID
+aws ec2 describe-images
+aws ec2 describe-key-pairs
+
+# VPC
+aws ec2 describe-vpcs
+aws ec2 describe-subnets
+aws ec2 describe-route-tables
+aws ec2 describe-security-groups
+aws ec2 describe-internet-gateways
+
+# Security Groups
+aws ec2 authorize-security-group-ingress
+aws ec2 revoke-security-group-ingress
+
+# RDS
+aws rds describe-db-instances
+aws rds start-db-instance --db-instance-identifier DBNAME
+aws rds stop-db-instance --db-instance-identifier DBNAME
+
+# Lambda
+aws lambda list-functions
+aws lambda invoke --function-name FUNCTION_NAME output.json
+
+# CloudWatch
+aws cloudwatch list-metrics
+aws cloudwatch get-metric-statistics
+
+# Route53
+aws route53 list-hosted-zones
+
+# EKS
+aws eks list-clusters
+aws eks describe-cluster --name CLUSTER_NAME
+
+# ECS
+aws ecs list-clusters
+aws ecs list-services --cluster CLUSTER_NAME
+
+# DynamoDB
+aws dynamodb list-tables
+aws dynamodb describe-table --table-name TABLE_NAME
+
+# SQS
+aws sqs list-queues
+
+# SNS
+aws sns list-topics
+
+# ELB / Load Balancer
+aws elbv2 describe-load-balancers
+aws elbv2 describe-target-groups
+
+# CloudFormation
+aws cloudformation list-stacks
+aws cloudformation describe-stacks
+
+# Organizations
+aws organizations list-accounts
+
+# Cost & Billing
+aws ce get-cost-and-usage
+
+# Output Formats
+aws s3 ls --output json
+aws s3 ls --output table
+aws s3 ls --output text
+
+
+# The 15 commands I would memorize first
+aws --version
+aws configure
+aws sts get-caller-identity
+
+aws s3 ls
+aws s3 cp
+aws s3 sync
+
+aws iam list-users
+aws iam list-groups
+aws iam list-roles
+
+aws ec2 describe-instances
+aws ec2 start-instances
+aws ec2 stop-instances
+
+aws ec2 describe-vpcs
+aws ec2 describe-subnets
+aws ec2 describe-security-groups

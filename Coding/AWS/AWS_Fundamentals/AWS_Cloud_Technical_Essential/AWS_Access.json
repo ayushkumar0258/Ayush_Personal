@@ -1,0 +1,63 @@
+{
+    "Statement":[{
+        "Effect":"Allow",
+        "Action":"ec2:*",
+        "Resource":<Amazon Resource Name (ARN) of the EC2 instances or resources you want to allow access to>
+        "condition": {
+            "StringEquals": {
+                "aws:username": "Ayush"
+            }
+        }
+
+    }]
+}
+
+Points to note:
+1. The "Effect" can be either "Allow" or "Deny". In this case, we are allowing access to EC2 resources.
+2. The "Action" specifies the AWS service and the specific actions that are allowed. In this case, we are allowing all actions on EC2 resources.
+3. The "Resource" specifies the ARN of the resources that the policy applies to. You can specify specific EC2 instances or use wildcards to allow access to all EC2 resources.
+4. The "Condition" block allows you to specify additional conditions for when the policy should be applied. In this case, we are using the "StringEquals" condition to allow access only if the username is "Ayush". You can modify this condition to suit your needs, such as allowing access based on the user's group membership or other attributes.            
+
+
+IAM Policy allow to either IAM user or IAM group?
+IAM policies can be attached to both IAM users and IAM groups. When a policy is attached to an IAM user, it grants permissions directly to that user. When a policy is attached to an IAM group, it grants permissions to all users that are members of that group. This allows for easier management of permissions, as you can assign permissions to a group and then add or remove users from that group as needed.
+
+Access to Amazon s3?
+To allow access to Amazon S3, you can create an IAM policy with the following structure:    
+
+{
+    "Statement":[{
+        "Effect":"Allow",
+        "Action":"s3:*",
+        "Resource":<Amazon Resource Name (ARN) of the S3 buckets or resources you want to allow access to>
+        "condition": {
+            "StringEquals": {
+                "aws:username": "Ayush"
+            }
+        }
+
+    }]
+}
+
+Amazon s3 read/write access?
+To allow read/write access to Amazon S3, you can create an IAM policy with the following structure:
+
+{
+    "Statement":[{
+        "Effect":"Allow",
+        "Action":[
+            "s3:GetObject",
+            "s3:PutObject"
+        ],
+        "Resource":<Amazon Resource Name (ARN) of the S3 buckets or resources you want to allow access to>
+        "condition": {
+            "StringEquals": {
+                "aws:username": "Ayush"
+            }
+        }
+
+    }]
+}
+
+What is IAM roles?
+IAM roles are a way to grant permissions to entities that are not AWS users, such as applications, services, or other AWS resources. A role is an AWS identity with specific permissions that can be assumed by trusted entities. When an entity assumes a role, it temporarily gains the permissions defined in that role's policy. This allows for secure and flexible access management without the need to create and manage individual IAM users for each entity that needs access to AWS resources. Roles are commonly used for granting permissions to applications running on EC2 instances, Lambda functions, or other AWS services.
