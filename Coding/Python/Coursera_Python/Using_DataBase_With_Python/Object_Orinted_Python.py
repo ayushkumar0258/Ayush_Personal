@@ -55,6 +55,8 @@ class Calculator:
 calc = Calculator()
 print(calc.add(5, 3))
 print(calc.subtract(5, 3))  
+print("Dir for class Calculator:", dir(Calculator))
+print("Type of add method:  ", type(Calculator.add))
 
 ############### constructor in python ############
 class Person:
@@ -63,4 +65,20 @@ class Person:
         self.age = age
 person1 = Person("Alice", 30)
 print(person1.name)
-print(person1.age)      
+print(person1.age)  
+print(dir(person1))
+
+
+########## object lifecycle in python ############  
+class MyClass:
+    def __init__(self, value):
+        self.value = value
+        print("Object created with value:", self.value)
+
+    def __del__(self):
+        print("Object with value", self.value, "is being destroyed.")
+obj = MyClass(10)
+print("Object value:", obj.value)
+del obj  # This will trigger the __del__ method and print the message about object destruction  
+
+

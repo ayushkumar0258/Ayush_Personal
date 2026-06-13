@@ -1,0 +1,7 @@
+import sqlite3
+conn =sqlite3.connect('emaildb.sqlite')
+cur=conn.cursor()
+cur.execute('drop table if exists counts')
+cur.execute('create table counts (email varchar(128) , count int)')
+cur.execute('select * from counts')
+#cur.execute('delete from counts')
