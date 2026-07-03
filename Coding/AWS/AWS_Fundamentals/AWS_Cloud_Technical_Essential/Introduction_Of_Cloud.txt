@@ -14,3 +14,147 @@
 ############ AZ vs Region in AWS ############
 ##### A Region in AWS is a geographical area that contains multiple Availability Zones (AZs). Each Region is designed to be completely isolated from other Regions, and each AZ within a Region is designed to be isolated from failures in other AZs. The main difference between an AZ and a Region is that an AZ is a single data center or a group of data centers within a Region, while a Region is a collection of multiple AZs. When you deploy your applications in AWS, you can choose to deploy them in a specific Region, and within that Region, you can choose to deploy them across multiple AZs for high availability and fault tolerance. By deploying your applications across multiple AZs within a Region, you can ensure that your applications remain available to your users even in the event of a failure in one AZ. Additionally, deploying your applications in multiple Regions can provide even greater resilience and availability, as it can protect your applications from failures that may occur in an entire Region. 
 
+
+##############  Global infrastructure #######################
+AWS (Amazon Web Services) provides cloud services through a worldwide network called Global Infrastructure. It is designed for high availability, fault tolerance, low latency, and scalability.
+
+1. Regions
+
+A Region is a geographic area that contains multiple isolated data centers.
+
+Examples:
+US East (N. Virginia)
+Europe (Ireland)
+Asia Pacific (Mumbai)
+Each Region is independent from others.
+Used for compliance, disaster recovery, and reducing latency.
+2. Availability Zones (AZs)
+
+An Availability Zone consists of one or more data centers within a Region.
+
+Each Region contains multiple AZs (usually 3 or more).
+AZs are connected through high-speed private networks.
+Designed to provide fault tolerance and high availability.
+
+Example:
+Region: Asia Pacific (Mumbai)
+
+AZ-a
+AZ-b
+AZ-c
+
+If one AZ fails, applications can continue running in another AZ.
+
+3. Edge Locations
+
+Edge Locations are sites used by services such as:
+
+Amazon CloudFront (CDN)
+AWS Global Accelerator
+Route 53
+
+Purpose:
+
+Cache content closer to users.
+Reduce latency.
+Improve application performance.
+4. Regional Edge Caches
+
+These sit between Regions and Edge Locations.
+
+Benefits:
+
+Larger cache storage.
+Faster content delivery.
+Reduced load on origin servers.
+5. Local Zones
+
+Local Zones bring AWS services closer to large metropolitan areas.
+
+Use cases:
+
+Gaming
+Media rendering
+Real-time analytics
+Machine learning inference
+
+They provide single-digit millisecond latency for local users.
+
+6. Wavelength Zones
+
+Wavelength Zones place AWS services inside 5G networks.
+
+Benefits:
+
+Ultra-low latency applications
+AR/VR
+Autonomous vehicles
+Live video streaming
+AWS Global Infrastructure
+│
+├── Regions
+│   ├── Availability Zone 1
+│   ├── Availability Zone 2
+│   └── Availability Zone 3
+│
+├── Edge Locations
+│
+├── Regional Edge Caches
+│
+├── Local Zones
+│
+└── Wavelength Zones
+
+
+################# Edge locations ###############
+Easy Way to Remember
+Imagine a large warehouse and neighborhood stores:
+Region = Main warehouse where products are stored.
+Availability Zones = Multiple secure buildings within that warehouse complex.
+Edge Locations = Small neighborhood stores that keep the most popular products close to customers.
+
+Customers usually buy from the nearby store (Edge Location). If the store doesn't have the item (cache miss), it requests it from the main warehouse (Region), stores a copy, and serves it to future customers more quickly.
+
+Interview Questions
+Q1. Can we launch an EC2 instance in an Edge Location?
+
+Answer: No. Edge Locations are not full AWS Regions. They are designed primarily for content delivery, DNS, and networking services—not for running compute resources like EC2.
+
+Q2. Does an Edge Location permanently store data?
+
+Answer: No. It stores cached copies of content temporarily based on cache settings (such as cache expiration or invalidation). The original data remains on the origin server (for example, an EC2 instance or an S3 bucket).
+
+Q3. What is the main purpose of an Edge Location?
+
+Answer: To reduce latency and improve performance by serving content from a location that is geographically closer to users.
+
+
+############### Regional Edge Caches #################
+A Regional Edge Cache is a larger caching layer that sits between the CloudFront Edge Locations and your origin server (such as an S3 bucket or EC2 instance).
+
+Its purpose is to:
+
+Store content for a longer time than Edge Locations.
+Reduce requests reaching the origin.
+Improve cache efficiency.
+Speed up delivery when content is no longer available in an Edge Location.
+
+With a Regional Edge Cache
+                 Origin Server
+                  (Mumbai)
+                      ▲
+                      │
+            Regional Edge Cache
+                (Europe)
+          ▲      ▲      ▲      ▲
+          │      │      │      │
+      London   Paris  Berlin Madrid
+        Edge    Edge    Edge   Edge
+
+Now the process is:
+
+User requests content.
+Nearby Edge Location checks its cache.
+If the content isn't there, it checks the Regional Edge Cache.
+If the Regional Edge Cache has it, it sends it to the Edge Location.
+Only if the Regional Edge Cache also misses does AWS contact the origin server.

@@ -1,0 +1,12 @@
+a=3
+print(type(a))
+s="ayush"
+print(type(s))
+f=45.6
+print(type(f))
+d=True
+print(type(d))
+e=int(d)
+print(type(e),e)
+i=int(f)
+print(type(i),f)
